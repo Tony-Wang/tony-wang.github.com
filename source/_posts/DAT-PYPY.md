@@ -1,4 +1,4 @@
-title: python实现的DAT字典多匹配
+title: python实现的DAT字典多匹配效率试验
 date: 2015-09-23 09:51:13
 tags: 
     - 中文分词
@@ -42,6 +42,7 @@ Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
 测试结果不出所料地让我崩溃,HanLP的实验都是毫秒级，都不超过50毫秒。
 
 ```
+
 /usr/bin/python /home/tony/MyProject/YaYaNLP/test/DemoDATMulitMatch.py
 分词时间: 1.75682616234
 分词个数: 945685
