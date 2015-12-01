@@ -1,7 +1,7 @@
 title: python实现的DAT字典多匹配效率试验
 date: 2015-09-23 09:51:13
 tags: 
-    - 中文分词
+    - 自然语言处理
     - python
 ---
 从HanLP看到了[darts-java](https://github.com/komiya-atsushi/darts-java),话说小日本除了苍老师还贡献了这样精巧的代码。
