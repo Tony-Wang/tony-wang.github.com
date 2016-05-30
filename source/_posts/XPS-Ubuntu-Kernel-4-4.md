@@ -18,3 +18,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.4-rc4-wily/linux-image-4.4
 ```
 
 ubuntu 16.04 每日构建的镜像在此[ubuntu16.04](http://cdimage.ubuntu.com/daily-live/current/xenial-desktop-amd64.iso)
+
+2016.5.20:
+目前已经完美驱动thundbolt3的显示。

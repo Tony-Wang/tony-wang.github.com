@@ -5,7 +5,8 @@ tags:
     - review
     - 实践
 ---
-![image](/image/checklist.jpg)
+![image](http://7xpa6t.com1.z0.glb.clouddn.com/15-12-17/47755891.jpg)
+
 # 一个典型的代码评审清单
 这是一个小级别的检查清单，可以用在结对和类级别的代码评审上。
 
