@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title:  托尼黄的博客
+title:  tony
 subtitle:
 description:
 author: Tony
@@ -69,6 +69,8 @@ theme: yilia
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:Tony-Wang/tony-wang.github.com.git
+  repo: 
+    github: git@github.com:Tony-Wang/tony-wang.github.com.git
+    coding: git@git.coding.net:tonyong/tonyblog.git
 
 
