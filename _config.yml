@@ -76,5 +76,5 @@ deploy:
   type: git
   repo: 
     github: git@github.com:Tony-Wang/tony-wang.github.com.git
-    coding: https://git.coding.net/tony_huang/tony_huang.git
+    coding: git@git.coding.net:mgphuang/myblog.git
 
