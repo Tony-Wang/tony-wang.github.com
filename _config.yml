@@ -3,12 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title:  黄勇的博客
+title:  黄勇
 subtitle:
 description:
-author: 黄勇
-language:
+author: tony
+language: zh-Hans
 timezone:
+avatar: "http://ww4.sinaimg.cn/mw690/7ecfc119jw8et76rgrm1kj20k00k00vi.jpg"
+baidu_analytics: c819b313f21875797d25904818ceb202
+#duoshuo_share: true
+jiathis: true
+#google_analytics: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -63,12 +68,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:Tony-Wang/tony-wang.github.com.git
-
+  repo: 
+    github: git@github.com:Tony-Wang/tony-wang.github.com.git
+    coding: https://git.coding.net/tony_huang/tony_huang.git
 
