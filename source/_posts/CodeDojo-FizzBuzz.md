@@ -1,14 +1,19 @@
-title: CodeDojo　FizzBuzz
+title: '编程道场:FizzBuzz'
 tags:
   - Dojo
-  - Kata
-  - TDD
   - FizzBuzz
+  - Kata
   - Python
+  - TDD
+  - 编程道场
+  - 招式
 categories: []
 date: 2016-05-23 13:28:00
 ---
-### FizzBuzz Kata by python
+### Code Dojo:FizzBuzz Kata by python
+### 使用TDD解决FizzBuzz问题
+
+![](http://7xpa6t.com1.z0.glb.clouddn.com/16-6-1/87882963.jpg)
 
 　　这是和一群小伙伴玩编程道场，练习一个TDD的KATA时的小题目，这样的形式很有意思，大家的关注力从头到尾都很集中。
 
