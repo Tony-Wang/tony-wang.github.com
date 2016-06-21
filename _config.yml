@@ -1,11 +1,11 @@
 # Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
+## Docs博客: http://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title:  黄勇
-subtitle:
-description:
+title:  研发效率
+subtitle: 研发　敏捷　效率　持续集成　TDD 重构　设计原则　编码标准 用户故事
+description: 由独立咨询师黄勇创立，欢迎朋友们和我交流。
 author: tony
 language: zh-Hans
 timezone:
@@ -13,7 +13,7 @@ avatar: "http://ww4.sinaimg.cn/mw690/7ecfc119jw8et76rgrm1kj20k00k00vi.jpg"
 baidu_analytics: bbe1068ce8d9f53dce8df78d0bbb209a
 #duoshuo_share: true
 jiathis: true
-#google_analytics: 
+google_analytics: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
