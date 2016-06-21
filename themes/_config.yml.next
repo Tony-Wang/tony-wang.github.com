@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "敏捷,效率,持续集成,TDD,重构,简单设计,设计原则,编码标准,用户故事,需求分析,设计模式,面向对象,DDD,DCI,DSL,Hexo,NexT"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -121,7 +121,7 @@ social:
   #LinkLabel: Link
   github: "https://github.com/Tony-Wang"
   微博: "http://weibo.com/u/2127544601"
-  知乎: "http://www.zhihu.com/people/huang-yong-77"
+  知乎: "http://www.zhihu.com/people/huangyong.me"
   mail: "mailto:tony@huangyong.me"
 
 reward_comment: 坚持分享，您的支持将鼓励我继续创作。
@@ -326,7 +326,7 @@ busuanzi_count:
 # tencent_analytics:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 
 
