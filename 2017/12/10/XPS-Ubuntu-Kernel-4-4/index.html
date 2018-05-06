@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="研发效率">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://www.huangyong.me">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ubuntu 16.04 + linux kernel 4.4 完美解决 Dell new XPS 13 的内置无线网卡问题 | 研发效率</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="研发效率" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='tony'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa fa-home"></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/敏捷/"><i class="fa fa-paper-plane"></i>敏捷</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/咨询/"><i class="fa fa-stethoscope"></i>咨询</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/匠艺/"><i class="fa fa-heart"></i>匠艺</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/tags/技术/"><i class="fa fa-flag"></i>技术</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/关于/"><i class="fa fa-envelope"></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="ubuntu 16.04 + linux kernel 4.4 完美解决 Dell new XPS 13 的内置无线网卡问题">
+            
+	            ubuntu 16.04 + linux kernel 4.4 完美解决 Dell new XPS 13 的内置无线网卡问题
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Ubuntu" title='Ubuntu'>
+                        Ubuntu
+                    </a>
+                
+                    <a href="/tags/笔记" title='笔记'>
+                        笔记
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/12/10</span>
+        </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>dell new XPS 13 内置的Dell Wireless 1560使用的是broadcom 4350解决方案，在ubuntu上一直是无驱动可用，最好的解决方案是换内置网卡。</p>
+<p>几经试验，在ubuntu16.04(dialy build) 加上刚刚放出的linux kernel 4.4 TLS RC4 版本，该版本更新了大量驱动，并在性能上做了可观的提升。</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4<span class="meta">.4</span>-rc4-wily/linux-headers-<span class="number">4.4</span><span class="meta">.0</span>-040400rc4-generic_4<span class="meta">.4</span><span class="meta">.0</span>-040400rc4.201512061930_amd64.deb</span><br><span class="line"></span><br><span class="line">wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4<span class="meta">.4</span>-rc4-wily/linux-headers-<span class="number">4.4</span><span class="meta">.0</span>-040400rc4_4<span class="meta">.4</span><span class="meta">.0</span>-040400rc4.201512061930_all.deb</span><br><span class="line"></span><br><span class="line">wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4<span class="meta">.4</span>-rc4-wily/linux-image-<span class="number">4.4</span><span class="meta">.0</span>-040400rc4-generic_4<span class="meta">.4</span><span class="meta">.0</span>-040400rc4.201512061930_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>ubuntu 16.04 每日构建的镜像在此<a href="http://cdimage.ubuntu.com/daily-live/current/xenial-desktop-amd64.iso" target="_blank" rel="noopener">ubuntu16.04</a></p>
+<p>2016.5.20:<br>目前已经完美驱动thundbolt3的显示。</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/12/10/code-review-checklist/" class="pre-post btn btn-default" title='代码评审清单'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">代码评审清单</span>
+        </a>
+    
+    
+        <a href="/2017/12/02/join/" class="next-post btn btn-default" title='python中合并字符串的效果'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">python中合并字符串的效果</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://www.huangyong.me"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>黄勇, MoocTest研发总监，前空军军官，大数据部门负责人。<br/>
+<img src="http://7xpa6t.com1.z0.glb.clouddn.com/wechat.jpg" width="100%" height="100%"></img>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/Tony-Wang" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:tony@huangyong.me" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">十二月 2017</i></a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">九月 2017</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">五月 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/"><i class="fa" aria-hidden="true">五月 2016</i></a><span class="archive-list-count">2</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/Dojo/" style="font-size: 10px;">Dojo</a> <a href="/tags/FizzBuzz/" style="font-size: 10px;">FizzBuzz</a> <a href="/tags/Kata/" style="font-size: 10px;">Kata</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/StoryBoard/" style="font-size: 10px;">StoryBoard</a> <a href="/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/User-Story/" style="font-size: 10px;">User Story</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/refactor/" style="font-size: 10px;">refactor</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/style/" style="font-size: 10px;">style</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范</a> <a href="/tags/实践/" style="font-size: 10px;">实践</a> <a href="/tags/招式/" style="font-size: 10px;">招式</a> <a href="/tags/故事板/" style="font-size: 10px;">故事板</a> <a href="/tags/敏捷/" style="font-size: 10px;">敏捷</a> <a href="/tags/敏捷教练工具箱/" style="font-size: 10px;">敏捷教练工具箱</a> <a href="/tags/敏捷需求/" style="font-size: 10px;">敏捷需求</a> <a href="/tags/极限编程/" style="font-size: 10px;">极限编程</a> <a href="/tags/用户故事/" style="font-size: 10px;">用户故事</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/简单设计/" style="font-size: 10px;">简单设计</a> <a href="/tags/编程道场/" style="font-size: 10px;">编程道场</a> <a href="/tags/自然语言处理/" style="font-size: 15px;">自然语言处理</a> <a href="/tags/访谈/" style="font-size: 10px;">访谈</a> <a href="/tags/重构-遗留系统/" style="font-size: 10px;">重构 遗留系统</a> <a href="/tags/需求/" style="font-size: 10px;">需求</a>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
